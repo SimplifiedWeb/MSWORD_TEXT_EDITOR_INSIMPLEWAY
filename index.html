@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome Icons -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Fonts -->
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+    />
+
+    <!-- Css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Text Editor</title>
+  </head>
+  <body>
+    <div class="container">
+
+    <!--Text Formating  -->
+      <div class="options">
+      <!--bold  -->
+        <button id="bold" class="option-button format">
+          <i class="fa fa-bold" aria-hidden="true"></i>
+        </button>
+
+        <!--Italic  -->
+        <button id="italic" class="option-button format">
+          <i class="fa fa-italic" aria-hidden="true"></i>
+        </button>
+          
+        <!--Underline  -->
+        <button id="underline" class="option-button format">
+          <i class="fa fa-underline" aria-hidden="true"></i>
+        </button>
+
+        <!--strikeThrough  -->
+        <button id="strikethrough" class="option-button format">
+          <i class="fa fa-strikethrough" aria-hidden="true"></i>
+        </button>
+          
+        <!--SuperScript  -->
+        <button id="superscript" class="option-button script">
+            <i class="fa fa-subscript" aria-hidden="true"></i>
+        </button>
+
+        <!--SubScript  -->
+        <button id="subscript" class="option-button script">
+          <i class="fa fa-superscript" aria-hidden="true"></i>
+        </button>
+
+        <!-- List -->
+
+        <!-- inserinOrder -->
+        <button id="insertOrderList" class="option-button">
+        <i class="fa-solid fa-list-ol"></i>
+        </button>
+
+        <!-- insertinUnorder -->
+        <button id="insertUnorderList" class="option-button">
+        <i class="fa-solid fa-list"></i>
+        </button>
+
+        <!-- Undo/rotate -->
+
+        <button id="undo" class="option-button">
+            <i class="fa-solid fa-rotate-left"></i>
+        </button>
+
+        <button id="redo" class="option-button">
+            <i class="fa-solid fa-rotate-right"></i>
+        </button>
+
+        <!-- Link -->
+
+        <button id="createLink" class="adv-option-button">
+            <i class="fa fa-link"></i>
+        </button>
+
+        <button id="unlink" class="adv-option-button">
+            <i class="fa fa-unlink"></i>
+        </button>
+
+
+        <!-- AlignMents -->
+
+        <button id="justifyLeft" class="option-button align">
+            <i class="fa-solid fa-align-left"></i>
+        </button>
+
+        <button id="justifyCenter" class="option-button align">
+            <i class="fa-solid fa-align-center"></i>
+        </button>
+        
+        <button id="justifyRight" class="option-button align">
+            <i class="fa-solid fa-align-right"></i>
+        </button>
+        
+        <button id="justifyFull" class="option-button align">
+            <i class="fa-solid fa-align-justify"></i>
+        </button>
+        
+        <button id="indent" class="option-button spacing">
+            <i class="fa-solid fa-indent"></i>
+        </button>
+        
+        <button id="outdent" class="option-button spacing">
+            <i class="fa-solid fa-outdent"></i>
+        </button>
+        
+        <!-- Headings -->
+
+        <select id="formatBlock"
+        class="adv-option-button">
+        <option value="H1">H1</option>
+        <option value="H2">H2</option>
+        <option value="H3">H3</option>
+        <option value="H4">H4</option>
+        <option value="H5">H5</option>
+        <option value="H6">H6</option>
+        </select>
+
+        <!-- Fonts -->
+
+        <select id="fontName" class="adv-option-button">
+        </select>
+        <select id="fontSize" class="adv-option-button">
+        </select>
+
+        <!-- Colors -->
+
+        <div class="input-wrapper">
+            <input type="color" id="foreColor" class="adv-option-button" />
+            <label for="foreColor">Font Color</label>
+        </div>
+        <div class="input-wrapper">
+            <input type="color" id="backColor" class="adv-option-button" />
+            <label for="backColor">Highlight Color</label>
+        </div>
+      </div>
+
+      <!--Text Formating Ends  -->
+
+      <div id="text-input" contenteditable="true"></div>
+
+  
+
+
+
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

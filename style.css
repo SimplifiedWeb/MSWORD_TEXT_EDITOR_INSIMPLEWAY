@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darkblue;
+}
+
+.container {
+  position: absolute;
+  width: 90vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.7);
+  background-color: white;
+  border-radius: 10px;
+  padding: 50px 30px;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+.options button {
+  height: 28px;
+  width: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 3px;
+  border: none;
+  color: #020929;
+  background-color: white;
+  outline: none;
+  cursor: pointer;
+}
+.options select {
+  padding: 7px;
+  border: 1px solid #020929;
+  border-radius: 5px;
+}
+.options label, .options select {
+  font-family: "Poppins", sans-serif;
+}
+.options .input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.options input[type=color] {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  width: 40px;
+  height: 28px;
+  border: none;
+  cursor: pointer;
+}
+.options input[type=color]::-webkit-color-swatch {
+  border-radius: 15px;
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #020929;
+}
+.options .active {
+  background-color: green;
+  color: yellow;
+}
+
+#text-input {
+  margin-top: 10px;
+  border: 1px solid #dddddd;
+  height: 50vh;
+  padding: 20px;
+}/*# sourceMappingURL=style.css.map */
