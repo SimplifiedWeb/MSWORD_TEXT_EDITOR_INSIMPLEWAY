@@ -1,4 +1,4 @@
-# MSWORD_TEXT_EDITOR_INSIMPLEWAY
+# MSWORD_TEXT_EDITOR_INSIMPLEWAY  Live (https://simplifiedweb.github.io/MSWORD_TEXT_EDITOR_INSIMPLEWAY/)
 Let me explain You how is the working and logic.
 Open the javascript and html file one side, and understand it what i said in this description.
 
