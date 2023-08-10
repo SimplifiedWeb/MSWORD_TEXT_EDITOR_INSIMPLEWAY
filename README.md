@@ -1,67 +1,45 @@
-# MSWORD_TEXT_EDITOR_INSIMPLEWAY  Live (https://simplifiedweb.github.io/MSWORD_TEXT_EDITOR_INSIMPLEWAY/)
-Let me explain You how is the working and logic.
-Open the javascript and html file one side, and understand it what i said in this description.
+# MSWORD_TEXT_EDITOR_INSIMPLEWAY 
+# The Main goal is to Understand The Logic How it is working.
+# Open project code one side and this readme another side to better understand what I'm trying to say.
+Check out Demo: https://simplifiedweb.github.io/MSWORD_TEXT_EDITOR_INSIMPLEWAY/
+Step 1: Understand the buttons. Some buttons can be highlighted when clicked, while others can't, like "link" and "undo" buttons, which are one-time operations.
 
-first open the project in browser and whaterver the formatting buttons you see in their that manipulate the text
-whatever you right in the field. That all the Buttons and Colors have the id and class that they are getting fired.
-So remember whaterver the buttons are their have the class and id.
-Use these attribute contenteditable="true" browser allows you write or typed on the viewport whatever the container you pass this attribute on. 
+Step 2: Organize buttons into groups, such as highlighted buttons and un-highlighted buttons. Colors and dropdowns for different headings are the remaining components.
 
-So first think,
- Step - 1: What is the buttons when we click get's highlighted. 
-	And what is the button that can't get highlights when we click. so like link, undo button can't get highlighted bcz it is one time operations.
- Step - 2: When you analyze everything through buttons. Then think about how you organize them group wise like highlighted buttons and Un-highlighted
-buttons. The other this lefts only Colors and dropdowns that show different heading.
+Step 3: Assign classes and IDs to the buttons to categorize them. Highlighted buttons share the same class, and others have unique classes or IDs.
 
- Step - 3: When you anlyzed everything than, give them a classes and id's like highlighted buttons all have same classes to identfy in one group 
-and other should be same as follow. Check my javascript file. You'll understand.
+Step 4: Implement the highlighting logic. When a button is clicked, highlight it while un-highlighting others. Check your JavaScript code for this logic.
 
- Step - 4: after doing all that, passit down to the highligh function and check for highligh one at a time and make others unhighlighted.
-Check the code you'll understand better.
+Step 5: The core logic relies on document.execCommand, which executes commands on the current document, selection, or given range. It takes three parameters: commandId, showUI, and value.
 
- Step - 5: So the main logic was the document.execCommand - Executes a command on the current document, current selection, or the given range.
-takes three things (commandId, showUI, value)
- commandId — String that specifies the command to execute. This command can be any of the command identifiers that can be executed in script.
+commandId: Represents the ID you've assigned to buttons, indicating what action they perform (e.g., "italic", "underline", "bold").
 
- showUI — Display the user interface, defaults to false.
+showUI: Display the user interface, usually set to false.
 
- value — Value to assign.
+value: Value associated with the command, relevant for buttons like color changers, heading modifiers, and font size changers.
 
-so the commadId is the id that i'm talking about in the start a unique id that tells what this button do when the user click
-like button that change the normal text into italic. so we use id = 'italic'
-     button that underline the text so we use id = "underline"
-     button that make text bold so we use id = "bold"
-     button that make text superscript we use id = "superscript"
+Here's how you pass the ID to document.execCommand:
 
-And the remaining will be same. And the color was simple we use input type = "color" that give color and use some css to make it look more beautiful
-and id for color changer was id="foreColor" for font Text and id="backColor" for text background color.
-
-So AFTER DOING ALL THIS, PASS IT DOWN THE ID IN THE document.execCommand THAT TAKE THE FIRST ARGUMENT WAS commandId, PUT THE BUTTONS ID IN THERE.
-IT AUTOMATICALLY EXECUTES AND GIVES OUTPUTS.
-
-//HOW WE GONNA PASS DOWN THE ID IN THE commandId ?
-
-const modifyText = (command, defaultUi, value) =>{
-//execCommand executes command on selected value
+const modifyText = (command, defaultUi, value) => {
 
     document.execCommand(command, defaultUi, value);
-
+    
 }
 
-//For basic operations which don't need value and parameters
-optionButton.forEach(button =>{
-    button.addEventListener("click", () =>{
-        modifyText(button.id, false, null)
-    })
+// For buttons that don't need a value
+
+optionButton.forEach(button => {
+
+    button.addEventListener("click", () => {
+    
+        modifyText(button.id, false, null);
+	
+    });
 })
+For buttons like color changers, heading modifiers, font name selectors, and font size changers, you pass down a specific class (e.g., advancedOptionButton) to distinguish them.
 
-THIS WAY WE PASS IT DOWN THE ID. optionButtons was the group that doesn't required the value. 
-for example colorChanger, different heading, different font names, different font sized have different values so their different.
-for that we use pass down different class name like i used advancedOptionButton class. check the javascript code.
+The onload event fires when the browser is refreshed. Functions assigned to this event run once the browser loads.
 
-So that's how we do this. It's not that tough just understand what we gonna do step by step, don't understand everything directly understand it step by step.
-The onload was just loads when the browser get refreshed immediatly, so whatever the function we pass down it get's fired once the browser get loads.
-
-Hope this Explanation helps,, Think and understand the logic.
+In conclusion, your approach is well-structured and involves categorizing buttons, using IDs and classes to differentiate them, and utilizing document.execCommand to execute the desired actions. Remember to understand each step and break it down. This logical understanding will help you work effectively and efficiently.
 
 
