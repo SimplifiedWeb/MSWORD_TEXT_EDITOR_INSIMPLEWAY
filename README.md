@@ -2,6 +2,7 @@
 # The Main goal is to Understand The Logic How it is working.
 # Open project code one side and this readme another side to better understand what I'm trying to say.
 Check out Demo: https://simplifiedweb.github.io/MSWORD_TEXT_EDITOR_INSIMPLEWAY/
+
 Step 1: Understand the buttons. Some buttons can be highlighted when clicked, while others can't, like "link" and "undo" buttons, which are one-time operations.
 
 Step 2: Organize buttons into groups, such as highlighted buttons and un-highlighted buttons. Colors and dropdowns for different headings are the remaining components.
